@@ -1,0 +1,352 @@
+/* Refreshed interface: readable typography, calm surfaces and clear actions. */
+:root {
+  --green: #175646;
+  --gold: #946a1e;
+  --border: #dce6e0;
+}
+body {
+  background: #f4f7f5;
+  color: #203c34;
+  font-size: 16px;
+  line-height: 1.65;
+}
+h1,
+h2,
+h3 {
+  font-family: system-ui, sans-serif;
+  letter-spacing: -0.035em;
+  font-weight: 700;
+}
+h1 {
+  font-size: clamp(30px, 4vw, 52px);
+  line-height: 1.16;
+}
+h2 {
+  font-size: clamp(24px, 2.6vw, 32px);
+}
+h3 {
+  font-size: 21px;
+  line-height: 1.35;
+}
+header {
+  padding: 18px 5vw;
+  gap: 24px;
+}
+header nav {
+  gap: 22px;
+}
+header nav a {
+  font-size: 14px;
+}
+.section {
+  padding: 48px max(5vw, calc((100vw - 1280px) / 2));
+}
+.card {
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 18px #163b2d05;
+}
+.card p {
+  font-size: 15px;
+}
+.muted {
+  font-size: 14px;
+  color: #586e63;
+}
+.page-intro {
+  font-size: 17px;
+  color: #52695e;
+  max-width: 700px;
+}
+.tag {
+  font-size: 12px;
+  border-radius: 20px;
+  padding: 5px 11px;
+}
+.hero {
+  padding: 68px max(5vw, calc((100vw - 1280px) / 2));
+  background: linear-gradient(125deg, #e3eee7, #f8f2dd);
+}
+.hero p {
+  font-size: 18px;
+}
+.hero > a {
+  display: inline-block;
+  background: var(--green);
+  color: white;
+  padding: 12px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+}
+.hero em {
+  font-style: normal;
+}
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+}
+button {
+  min-height: 44px;
+  border-radius: 9px;
+  font-weight: 600;
+}
+input,
+select,
+textarea {
+  min-height: 44px;
+  border-radius: 8px;
+}
+label {
+  font-size: 14px;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 3px solid #b48326;
+  outline-offset: 4px;
+}
+dialog {
+  padding: 28px;
+  border-radius: 18px;
+}
+.admin-menu {
+  border-radius: 14px;
+}
+.admin-menu button {
+  border-radius: 10px;
+}
+.admin-panel .cards {
+  gap: 18px;
+}
+.table-wrap {
+  border-radius: 12px;
+}
+.source-note {
+  font-size: 12px !important;
+  color: #617469;
+  line-height: 1.6;
+}
+.directory-heading {
+  margin-bottom: 34px;
+}
+.directory-heading h1 {
+  max-width: 850px;
+  margin: 16px 0;
+}
+.field-grid {
+  gap: 22px;
+}
+.field-card {
+  padding: 30px;
+  border-top: 4px solid var(--field-accent);
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
+}
+.field-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px #163b2d12;
+  border-color: var(--field-accent);
+}
+.field-rehabsos {
+  --field-accent: #23785b;
+  --field-tint: #e7f2eb;
+}
+.field-linjamsos {
+  --field-accent: #28688e;
+  --field-tint: #e8f0f7;
+}
+.field-anak {
+  --field-accent: #a06a1d;
+  --field-tint: #fcf2db;
+}
+.field-perempuan {
+  --field-accent: #84567f;
+  --field-tint: #f3eaf2;
+}
+.field-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.field-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: var(--field-tint);
+  color: var(--field-accent);
+  font-weight: 800;
+}
+.field-card h2 {
+  font-size: 25px;
+  line-height: 1.3;
+  margin: 20px 0 6px;
+}
+.field-card strong {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  font-size: 15px;
+}
+.field-banner {
+  margin-top: 24px;
+  padding: 34px;
+  border-radius: 18px;
+  background: var(--field-tint);
+  border-left: 5px solid var(--field-accent);
+}
+.field-banner h1 {
+  max-width: 900px;
+  margin: 12px 0 16px;
+}
+.field-banner p {
+  max-width: 800px;
+  margin: 0;
+  color: #405e50;
+}
+.back-link {
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.field-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(300px, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+.field-programs {
+  min-width: 0;
+}
+.field-programs > .cards {
+  grid-template-columns: 1fr;
+}
+.field-programs > h2 {
+  margin: 8px 0;
+}
+.field-duties {
+  margin: 0;
+  padding: 26px;
+  min-width: 0;
+}
+.field-duties h2 {
+  font-size: 23px;
+  letter-spacing: -0.02em;
+}
+.field-duties h3 {
+  font-size: 17px;
+}
+.field-duties details {
+  margin-top: 22px;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+.field-duties summary {
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  min-height: 44px;
+  color: var(--green);
+}
+.field-duties ol {
+  padding-left: 22px;
+  font-size: 14px;
+}
+.field-duties li {
+  padding-left: 4px;
+  margin: 12px 0;
+}
+.information-tabs {
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.information-tabs a {
+  border-radius: 8px 8px 0 0;
+}
+.information-tabs a.active {
+  background: #e5eee7;
+}
+.field-programs .card button {
+  margin-top: 10px;
+}
+.organization-summary strong {
+  font-family: system-ui, sans-serif;
+}
+#close {
+  min-width: 44px;
+  min-height: 44px;
+}
+@media (max-width: 1000px) {
+  header {
+    gap: 14px;
+  }
+  header nav {
+    gap: 12px;
+  }
+  .field-content {
+    grid-template-columns: 1fr;
+  }
+  .field-duties {
+    max-width: none;
+  }
+  .field-programs > .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .admin-layout {
+    grid-template-columns: 210px minmax(0, 1fr);
+  }
+}
+@media (max-width: 800px) {
+  .admin-layout {
+    grid-template-columns: 1fr;
+  }
+  .section {
+    padding: 32px 5vw;
+  }
+  .field-banner {
+    padding: 24px;
+  }
+  .field-programs > .cards {
+    grid-template-columns: 1fr;
+  }
+  .hero {
+    padding: 44px 5vw;
+  }
+}
+@media (max-width: 600px) {
+  .field-grid {
+    grid-template-columns: 1fr;
+  }
+  .field-card {
+    padding: 24px;
+  }
+  .field-card h2 {
+    font-size: 23px;
+  }
+  .information-tabs a {
+    font-size: 13px;
+    padding: 10px;
+  }
+  .field-banner h1 {
+    font-size: 29px;
+  }
+  .field-duties {
+    padding: 22px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .field-card,
+  .gateway-card {
+    transition: none;
+    transform: none;
+  }
+}

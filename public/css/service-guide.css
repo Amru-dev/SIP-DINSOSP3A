@@ -1,0 +1,96 @@
+/* Panduan layanan */
+.service-guide h2 {
+  font-size: 1.65rem;
+  line-height: 1.35;
+}
+.guide-status {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.guide-section {
+  margin-top: 26px;
+  padding-top: 22px;
+  border-top: 1px solid #dce7e0;
+}
+.guide-section h3 {
+  font-size: 1.15rem;
+  margin: 0 0 16px;
+}
+.guide-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 0;
+}
+.guide-facts > div {
+  background: #eff4ee;
+  padding: 15px;
+  border-radius: 10px;
+  min-width: 0;
+}
+.guide-facts dt {
+  font-size: 0.78rem;
+  color: #657b6d;
+  font-weight: 700;
+}
+.guide-facts dd {
+  font-size: 0.9rem;
+  margin: 6px 0 0;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+.guide-facts small {
+  font-size: 0.8rem;
+}
+.guide-requirements {
+  padding-left: 24px;
+}
+.guide-requirements li {
+  padding-left: 5px;
+  margin: 12px 0;
+  line-height: 1.7;
+}
+.guide-steps {
+  padding-left: 26px;
+}
+.guide-steps li {
+  margin: 18px 0;
+  padding-left: 8px;
+}
+.guide-steps li::marker {
+  color: #9a7625;
+  font-weight: 750;
+}
+.guide-steps strong {
+  font-size: 0.95rem;
+}
+.guide-steps p {
+  margin: 6px 0;
+  font-size: 0.87rem;
+  color: #617567;
+  line-height: 1.75;
+}
+.guide-action {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid #dce7e0;
+}
+.guide-action > p {
+  font-size: 0.9rem;
+}
+@media (max-width: 750px) {
+  .latest-panels {
+    grid-template-columns: 1fr;
+  }
+  .latest-panel {
+    padding: 22px;
+  }
+  .latest-heading,
+  .latest-category-heading {
+    gap: 12px;
+  }
+  .guide-facts {
+    grid-template-columns: 1fr;
+  }
+}

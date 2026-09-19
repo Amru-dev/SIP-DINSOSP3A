@@ -1,0 +1,18 @@
+/* Navigasi publik yang ringkas */
+header {
+  position: relative;
+}
+header nav a {
+  padding: 8px 2px;
+  border-bottom: 2px solid transparent;
+}
+header nav a[aria-current="page"] {
+  font-weight: 700;
+  border-bottom-color: var(--gold);
+}
+.nav-toggle {
+  display: none;
+  padding: 7px 11px;
+  font-size: 22px;
+  line-height: 1;
+}

@@ -1,0 +1,273 @@
+/* Detail dan linimasa pengajuan bantuan */
+dialog:has(.aid-detail) {
+  width: min(880px, 95vw);
+  padding: 32px;
+}
+.aid-detail {
+  clear: both;
+}
+.aid-detail > h2 {
+  font-size: clamp(1.35rem, 3vw, 1.9rem);
+  line-height: 1.4;
+  margin: 12px 0;
+}
+.aid-reference {
+  font-size: 0.75rem;
+  color: #6d7f73;
+  overflow-wrap: anywhere;
+  margin: 0 0 22px;
+}
+.aid-summary {
+  background: #edf4ee;
+  border: 1px solid #d7e6da;
+  border-left: 4px solid #38775b;
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 28px;
+}
+.aid-summary h3 {
+  font-size: 1.15rem;
+  margin: 9px 0;
+}
+.aid-summary > p {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  margin: 8px 0 0;
+  color: #536e5d;
+}
+.aid-action-note {
+  background: #fff7df;
+  border: 1px solid #ead6a0;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 16px;
+  font-size: 0.9rem;
+}
+.aid-action-note p {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  margin: 8px 0 0;
+}
+.aid-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+.aid-section-heading h3 {
+  font-size: 1.12rem;
+  margin: 0;
+}
+.aid-section-heading p {
+  font-size: 0.8rem;
+  color: #718176;
+  margin: 6px 0 0;
+}
+.aid-count {
+  font-size: 0.73rem;
+  border: 1px solid #dce7df;
+  border-radius: 30px;
+  padding: 4px 10px;
+  color: #607469;
+  background: #f5f8f4;
+}
+.aid-history {
+  margin: 28px 0;
+}
+.aid-timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 7px;
+}
+.aid-event {
+  position: relative;
+  border-left: 2px solid #dce7df;
+  padding: 0 0 24px 25px;
+  min-width: 0;
+}
+.aid-event:last-child {
+  padding-bottom: 8px;
+  border-left-color: transparent;
+}
+.aid-event::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  background: #759684;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #c9dace;
+}
+.aid-event-success::before {
+  background: #248056;
+  box-shadow: 0 0 0 1px #92b99b;
+}
+.aid-event-attention::before {
+  background: #bb7933;
+  box-shadow: 0 0 0 1px #dcc198;
+}
+.aid-event-heading {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.aid-event-heading h4 {
+  margin: 0;
+  font-size: 0.97rem;
+  line-height: 1.5;
+  color: #274b38;
+}
+.aid-latest {
+  font-size: 0.66rem;
+  color: #225b3a;
+  background: #e4f0e3;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+.aid-event-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  font-size: 0.73rem;
+  color: #728378;
+  line-height: 1.6;
+  margin: 6px 0 10px;
+}
+.aid-event-note {
+  font-size: 0.88rem;
+  line-height: 1.8;
+  background: #f4f7f3;
+  border: 1px solid #e7ede5;
+  border-radius: 8px;
+  padding: 12px 15px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+.aid-event-attention .aid-event-note {
+  background: #fff9ed;
+  border-color: #f0e4c9;
+}
+.aid-older summary,
+.aid-upload-history summary,
+.aid-applicant summary {
+  cursor: pointer;
+  font-size: 0.87rem;
+  font-weight: 650;
+  line-height: 1.6;
+  padding: 14px 0;
+  min-height: 44px;
+  color: #305740;
+}
+.aid-older .aid-timeline,
+.aid-upload-history .aid-timeline {
+  margin-top: 18px;
+}
+.aid-upload-history {
+  margin-top: 18px;
+  border-top: 1px solid #e2e9e1;
+}
+.aid-upload-history summary span {
+  font-size: 0.73rem;
+  color: #718374;
+  font-weight: 400;
+  margin-left: 10px;
+}
+.aid-applicant {
+  border: 1px solid #dfe8dc;
+  border-radius: 10px;
+  padding: 0 18px;
+  margin-bottom: 28px;
+}
+.aid-applicant dl {
+  display: grid;
+  grid-template-columns: 100px minmax(0, 1fr);
+  gap: 10px 16px;
+  font-size: 0.88rem;
+  line-height: 1.75;
+  margin: 8px 0 20px;
+}
+.aid-applicant dt {
+  font-weight: 650;
+  color: #657b6b;
+}
+.aid-applicant dd {
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.aid-detail .application-document {
+  padding: 16px;
+  gap: 16px;
+}
+.aid-detail .application-document > div:first-child {
+  min-width: 0;
+}
+.aid-detail .application-document strong {
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+.aid-detail .application-document small {
+  font-size: 0.77rem;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.aid-detail .application-document-actions {
+  flex-shrink: 0;
+}
+.aid-detail .application-document-actions button,
+.aid-detail .application-document-actions a {
+  font-size: 0.78rem;
+  padding: 8px 12px;
+}
+.aid-detail form {
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e8dc;
+}
+.aid-detail form h3 {
+  font-size: 1.1rem;
+}
+@media (max-width: 600px) {
+  dialog:has(.aid-detail) {
+    padding: 22px 18px;
+  }
+  .aid-summary {
+    padding: 18px;
+  }
+  .aid-event {
+    padding-left: 20px;
+  }
+  .aid-event-note {
+    padding: 11px;
+  }
+  .aid-event-meta {
+    flex-direction: column;
+    gap: 2px;
+  }
+  .aid-detail .application-document {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .aid-detail .application-document-actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  .aid-applicant dl {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .aid-applicant dd {
+    margin-bottom: 10px;
+  }
+  .aid-section-heading {
+    gap: 10px;
+  }
+}

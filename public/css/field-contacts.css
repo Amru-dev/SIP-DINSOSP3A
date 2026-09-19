@@ -1,0 +1,58 @@
+/* Kontak dan jadwal per bidang */
+.field-contact-info {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin: 24px 0 30px;
+}
+.field-contact-card {
+  padding: 26px;
+  border: 1px solid #dce7e0;
+  border-radius: 18px;
+  background: #fff;
+  min-width: 0;
+}
+.field-contact-card h2 {
+  font-size: 1.25rem;
+  margin: 10px 0 20px;
+}
+.field-contact-card p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin: 12px 0;
+  overflow-wrap: anywhere;
+}
+.field-contact-card p > span {
+  display: block;
+  font-size: 0.75rem;
+  color: #677c6e;
+  font-weight: 650;
+}
+.field-contact-card a {
+  text-underline-offset: 4px;
+}
+.field-contact-name {
+  font-weight: 650;
+  color: #244c3a;
+}
+.field-schedule {
+  white-space: pre-wrap;
+}
+.field-contact-card:last-child {
+  background: #edf3eb;
+  border-color: #d9e5d5;
+}
+#fieldSaveStatus {
+  color: #194c3d;
+  font-weight: 600;
+  line-height: 1.7;
+}
+@media (max-width: 700px) {
+  .field-contact-info {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .field-contact-card {
+    padding: 22px;
+  }
+}

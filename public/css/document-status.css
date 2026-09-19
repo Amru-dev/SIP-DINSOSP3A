@@ -1,0 +1,89 @@
+/* Penanda kelengkapan dan persetujuan sesuai peran */
+.document-completeness {
+  display: block;
+  width: fit-content;
+  font-size: 0.72rem;
+  line-height: 1.6;
+  margin-top: 7px;
+  padding: 4px 9px;
+  border-radius: 7px;
+}
+.document-completeness.complete {
+  background: #e3f0e5;
+  color: #245d38;
+}
+.document-completeness.incomplete {
+  background: #fff2cf;
+  color: #775820;
+}
+.aid-checklist {
+  padding: 22px;
+  border: 1px solid #e6d7ad;
+  border-radius: 12px;
+  background: #fffbf0;
+  margin: 24px 0;
+}
+.aid-checklist.complete {
+  background: #f1f7ef;
+  border-color: #cbdcc9;
+}
+.aid-checklist h3 {
+  font-size: 1rem;
+  margin: 0 0 10px;
+}
+.aid-checklist p {
+  font-size: 0.85rem;
+  line-height: 1.8;
+  margin: 8px 0;
+}
+.aid-checklist ul {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+}
+.aid-checklist li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 12px 0;
+  border-top: 1px solid #dedfcf;
+  font-size: 0.83rem;
+}
+.checklist-state {
+  font-weight: 650;
+  min-width: 125px;
+}
+.aid-checklist li > span:nth-child(2) {
+  flex: 1;
+  min-width: 180px;
+  overflow-wrap: anywhere;
+}
+.aid-checklist button {
+  font-size: 0.76rem;
+  padding: 7px 10px;
+}
+.request-approved-draft {
+  background: #eef5e9;
+  border: 1px solid #cbdcbf;
+  border-radius: 10px;
+  padding: 18px;
+  margin-top: 22px;
+}
+.citizen-workspaces button.active {
+  background: #194c3d;
+  color: white;
+}
+@media (max-width: 600px) {
+  .aid-checklist {
+    padding: 17px;
+  }
+  .aid-checklist li {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+  }
+  .aid-checklist li > span:nth-child(2) {
+    min-width: 0;
+  }
+}

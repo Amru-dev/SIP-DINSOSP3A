@@ -1,0 +1,122 @@
+/* Ringkasan informasi terbaru di beranda */
+.home-updates {
+  background: #eef3ed;
+}
+.latest-heading,
+.latest-category-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.latest-heading {
+  margin-bottom: 28px;
+}
+.latest-heading h2 {
+  margin: 10px 0;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+}
+.latest-heading p {
+  margin: 0;
+  color: #62766a;
+}
+.latest-heading > a,
+.latest-category-heading > a {
+  font-size: 0.85rem;
+  font-weight: 650;
+  text-underline-offset: 4px;
+}
+.latest-category-heading {
+  margin-bottom: 20px;
+}
+.latest-category-heading h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+.latest-panels {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+.latest-panel {
+  background: #fff;
+  padding: 26px;
+  border: 1px solid #dce7e0;
+  border-radius: 18px;
+  min-width: 0;
+}
+.latest-row {
+  padding: 20px 0;
+  border-top: 1px solid #e5ece6;
+}
+.latest-row:last-child {
+  padding-bottom: 0;
+}
+.latest-row time {
+  display: inline-block;
+  font-size: 0.78rem;
+  color: #6c7c70;
+}
+.latest-row h4 {
+  margin: 9px 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.latest-row p {
+  margin: 8px 0 0;
+  font-size: 0.9rem;
+  color: #607366;
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+.latest-title {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #194c3d;
+  text-align: left;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.latest-important,
+.latest-pdf {
+  display: inline-block;
+  padding: 3px 8px;
+  margin-right: 10px;
+  margin-bottom: 6px;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  font-weight: 750;
+  background: #fff0c7;
+  color: #755415;
+}
+.latest-pdf {
+  background: #f5e8e3;
+  color: #8b4130;
+}
+.latest-document-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+.latest-document-actions button,
+.latest-document-actions a {
+  font-size: 0.82rem;
+}
+.announcement-detail-body,
+.guide-description {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  line-height: 1.85;
+}
+.announcement-detail-body {
+  padding: 12px 0;
+}
