@@ -54,7 +54,7 @@ label > * {
   display: block;
   margin-top: 5px;
 }
-header {
+body > header {
   padding: 20px 6vw;
   display: flex;
   justify-content: space-between;
@@ -247,7 +247,7 @@ dialog::backdrop {
 .list li {
   margin: 9px 0;
 }
-footer {
+.site-footer {
   background: #15382d;
   color: #b3c7bb;
   padding: 28px 7vw;
@@ -277,7 +277,7 @@ input:focus-visible {
   outline-offset: 3px;
 }
 @media (max-width: 800px) {
-  header {
+  body > header {
     align-items: flex-start;
     gap: 20px;
     flex-direction: column;

@@ -23,7 +23,7 @@ export function markActiveNavigation(route) {
   const active =
     route === "permohonan-informasi"
       ? "informasi"
-      : route.startsWith("kegiatan/")
+      : (route.startsWith("kegiatan/") || route.startsWith("pengumuman/"))
         ? "informasi"
         : route.startsWith("bidang/")
           ? "layanan"

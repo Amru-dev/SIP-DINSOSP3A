@@ -1,3 +1,4 @@
+import { announcementDetail } from "./features/announcements/views.js";
 import { $ } from "./core/dom.js";
 import { state } from "./core/state.js";
 import { notify } from "./core/ui.js";
@@ -58,6 +59,7 @@ export async function render() {
       return await activityDetail(route.slice(9));
     if (route === "kegiatan") return await publicInformation("activities");
     if (route === "dokumen") return await publicInformation("documents");
+    if (route.startsWith("pengumuman/")) return await announcementDetail(decodeURIComponent(route.slice(11)));
     if (route === "pengumuman") return await publicInformation("announcements");
     $("#page").innerHTML =
       (route === "home"

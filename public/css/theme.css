@@ -28,14 +28,14 @@ h3 {
   font-size: 21px;
   line-height: 1.35;
 }
-header {
+body > header {
   padding: 18px 5vw;
   gap: 24px;
 }
-header nav {
+body > header nav {
   gap: 22px;
 }
-header nav a {
+body > header nav a {
   font-size: 14px;
 }
 .section {
@@ -286,10 +286,10 @@ dialog {
   min-height: 44px;
 }
 @media (max-width: 1000px) {
-  header {
+  body > header {
     gap: 14px;
   }
-  header nav {
+  body > header nav {
     gap: 12px;
   }
   .field-content {

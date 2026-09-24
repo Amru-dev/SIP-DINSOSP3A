@@ -78,11 +78,11 @@
   .nav-toggle {
     display: block;
   }
-  header {
+  body > header {
     align-items: center;
     flex-direction: row;
   }
-  header nav {
+  body > header nav {
     display: none;
     position: absolute;
     z-index: 20;
@@ -97,13 +97,13 @@
     flex-direction: column;
     align-items: stretch;
   }
-  header nav.open {
+  body > header nav.open {
     display: flex;
   }
-  header nav a {
+  body > header nav a {
     padding: 10px 4px;
   }
-  header nav button {
+  body > header nav button {
     width: 100%;
   }
   .admin-layout {

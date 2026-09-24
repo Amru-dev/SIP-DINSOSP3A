@@ -1,3 +1,4 @@
+import { announcementCard } from "../announcements/views.js";
 import { announcementFields, placements } from "../../config/fields.js";
 import { api } from "../../core/api.js";
 import { $, esc } from "../../core/dom.js";
@@ -119,30 +120,7 @@ export async function publicInformation(kind) {
         .map((row) => {
           if (kind === "employees") return employeeCard(row);
           if (kind === "activities") return activityCard(row);
-          if (kind === "announcements")
-            return (
-              '<article class="card announcement-card' +
-              (row.important ? " important" : "") +
-              '">' +
-              (row.important
-                ? '<span class="announcement-important">PENTING</span>'
-                : "") +
-              '<span class="tag">' +
-              esc(announcementFields[row.field]) +
-              "</span><h3>" +
-              esc(row.title) +
-              '</h3><p class="muted">Dipublikasikan <time datetime="' +
-              row.publish_date +
-              '">' +
-              formatDate(row.publish_date) +
-              "</time>" +
-              (row.expires_date
-                ? " · Tampil sampai " + formatDate(row.expires_date)
-                : "") +
-              "</p><pre>" +
-              esc(row.body) +
-              "</pre></article>"
-            );
+          if (kind === "announcements") return announcementCard(row);
           return (
             '<article class="card document-card"><span class="document-icon">PDF</span><span class="tag">Tahun ' +
             row.year +

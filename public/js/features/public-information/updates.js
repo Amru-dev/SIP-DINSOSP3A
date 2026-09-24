@@ -1,8 +1,7 @@
-import { announcementFields } from "../../config/fields.js";
 import { api } from "../../core/api.js";
-import { $, esc } from "../../core/dom.js";
+import { esc } from "../../core/dom.js";
 import { formatDate } from "../../core/format.js";
-import { dialog, notify } from "../../core/ui.js";
+import { notify } from "../../core/ui.js";
 import { activityCard } from "../activities/views.js";
 import { previewDocument } from "../documents/preview.js";
 
@@ -77,11 +76,11 @@ export async function loadPublicUpdates(container) {
             esc(a.publish_date) +
             '">' +
             formatDate(a.publish_date) +
-            '</time><h4><button class="latest-title" type="button" data-home-announcement="' +
-            esc(a.id) +
+            '</time><h4><a class="latest-title" href="#pengumuman/' +
+            esc(encodeURIComponent(a.id)) +
             '">' +
             esc(a.title) +
-            "</button></h4><p>" +
+            "</a></h4><p>" +
             esc(a.body.replace(/\s+/g, " ").slice(0, 140)) +
             (a.body.length > 140 ? "…" : "") +
             "</p></article>",
@@ -108,26 +107,6 @@ export async function loadPublicUpdates(container) {
         .join("") ||
         '<p class="empty">Belum ada dokumen yang dipublikasikan.</p>') +
       "</section></div>";
-    container.querySelectorAll("[data-home-announcement]").forEach(
-      (button) =>
-        (button.onclick = () => {
-          const a = announcements.find(
-            (item) => item.id === button.dataset.homeAnnouncement,
-          );
-          dialog(
-            '<span class="eyebrow">PENGUMUMAN DINAS</span><h2>' +
-              esc(a.title) +
-              '</h2><p class="muted">' +
-              formatDate(a.publish_date) +
-              " · " +
-              esc(announcementFields[a.field]) +
-              '</p><div class="announcement-detail-body">' +
-              esc(a.body) +
-              "</div>",
-          );
-          $("#dialog").scrollTop = 0;
-        }),
-    );
     container.querySelectorAll("[data-home-document]").forEach(
       (button) =>
         (button.onclick = () => {
